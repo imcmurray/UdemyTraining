@@ -1,3 +1,4 @@
+ls -ltr
 package main
 
 import "fmt"
