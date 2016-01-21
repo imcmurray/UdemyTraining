@@ -28,11 +28,18 @@ func main() {
 	}
 
 	transactions := make([][]int, 0, 3) // Preferred method to make slice
+	// this just happens to be a multi dimensional slice since "[][]"
 	for i := 0; i < 3; i++ {
-		//var transaction []int // empty nil slice - not preferred but capable
+		// slice creation method 1
+		//var transaction []int
+		// empty nil slice - not preferred but capable
 		// slice is pointing to an uninitialized array
 		// (slices made without make) must be appened to.
+		// slice creation method 2
 		transaction := []int{}
+		// initializes the underlying array
+		// must still append to the slice
+		// slice creation method 3 - see the above transactions make statement
 		for j := 0; j < 4; j++ {
 			transaction = append(transaction, j)
 		}
